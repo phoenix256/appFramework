@@ -1,0 +1,112 @@
+apply plugin: 'com.android.library'
+apply plugin: 'android-apt'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.1"
+
+    useLibrary 'org.apache.http.legacy'
+
+    publishNonDefault true
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        base {
+            keyAlias 'dergilik'
+            keyPassword 'bardsong4!367'
+            storeFile file('../baseKeystore.jks')
+            storePassword 'bardsong34!98'
+        }
+        framed {
+            keyAlias 'dergilik'
+            keyPassword 'bardsong4!367'
+            storeFile file('../baseKeystore.jks')
+            storePassword 'bardsong34!98'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            debuggable true
+
+            buildConfigField "boolean", "IS_TEST", "true"
+        }
+
+        debug {
+            minifyEnabled false
+
+            buildConfigField "boolean", "IS_TEST", "true"
+        }
+    }
+
+    productFlavors {
+
+        base {
+            versionCode 2
+            versionName "1.0"
+
+            signingConfig signingConfigs.base
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+
+        framed {
+            versionCode 8
+            versionName "1.0.0"
+            signingConfig signingConfigs.framed
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard_rules.pro'
+        }
+
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:multidex:1.0.1'
+    testCompile 'junit:junit:4.12'
+
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.android.support:support-v4:25.0.1'
+
+    compile 'com.google.android.gms:play-services:10.0.0'
+
+    compile 'com.google.firebase:firebase-core:10.0.0'
+    compile 'com.google.firebase:firebase-crash:10.0.0'
+    compile 'com.firebaseui:firebase-ui:1.0.0'  // Single target that includes all FirebaseUI libraries above
+
+    compile 'com.android.support:design:25.0.1'
+    compile 'com.android.support:cardview-v7:25.0.1'
+    compile 'com.android.support:recyclerview-v7:25.0.1'
+
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'com.squareup.okhttp:okhttp:2.7.2'
+    compile 'org.jsoup:jsoup:1.8.3'
+
+    compile 'de.hdodenhof:circleimageview:2.0.0'
+
+    compile 'com.roughike:bottom-bar:1.3.3'
+
+    compile 'com.miguelcatalan:materialsearchview:1.4.0'
+
+    compile project(':collectionpicker')
+
+    compile 'com.jakewharton:butterknife:8.1.0'
+    apt 'com.jakewharton:butterknife-compiler:8.1.0'
+
+}

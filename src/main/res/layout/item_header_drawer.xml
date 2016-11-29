@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/drawerHeaderHeight"
+    android:background="@drawable/banner_icon"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleView"
+        android:layout_width="@dimen/drawerHeaderImage"
+        android:layout_height="@dimen/drawerHeaderImage"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:src="@drawable/banner_icon" />
+
+
+    <LinearLayout
+        android:id="@+id/drawerSubtitleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/drawerSubtitleHeight"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/drawerSubtitleItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <tr.wolflame.framework.base.util.helper.TextViewPlus
+            android:id="@+id/name"
+            style="@style/MenuItemRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Akash Bangad"
+            app:customFont="@string/robotoMedium" />
+
+        <tr.wolflame.framework.base.util.helper.TextViewPlus
+            android:id="@+id/email"
+            style="@style/MenuItemRow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_between_content_areas"
+            android:text="akash.bangad93@gmail.com"
+            app:customFont="@string/robotoRegular" />
+    </LinearLayout>
+
+</RelativeLayout>

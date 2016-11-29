@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/drawerRowHeight"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/space_between_content_areas"
+    android:paddingEnd="@dimen/activity_horizontal_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingStart="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/space_between_content_areas">
+
+    <ImageView
+        android:id="@+id/rowIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:src="@android:drawable/ic_btn_speak_now" />
+
+    <tr.wolflame.framework.base.util.helper.TextViewPlus
+        android:id="@+id/rowText"
+        style="@style/MenuItemRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium Text"
+        app:customFont="@string/robotoMedium"/>
+
+</LinearLayout>

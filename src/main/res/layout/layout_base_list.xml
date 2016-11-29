@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tr.wolflame.framework.base.util.helper.MultiStateFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/multiStateFrameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/frameLayout_list_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top">
+
+        <!-- A RecyclerView with some commonly used attributes -->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scrollbars="vertical"
+            android:visibility="gone" />
+    </FrameLayout>
+
+</tr.wolflame.framework.base.util.helper.MultiStateFrameLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="AppTheme.Base">
+
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowNoTitle">true</item>
+        <!--We will be using the toolbar so no need to show ActionBar-->
+        <item name="android:windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="toolbarStyle">@style/BaseActionBarTheme</item>
+    </style>
+
+    <style name="BaseActionBarTheme" parent="Widget.AppCompat.Toolbar">
+        <item name="android:fitsSystemWindows">false</item>
+        <item name="android:textColorPrimary">@color/icons</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
+        <item name="colorControlNormal">@color/icons</item>
+        <item name="actionButtonStyle">@style/Widget.AppCompat.ActionBar</item>
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?android:selectableItemBackground</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+    </style>
+
+    <style name="MenuItemRow" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/selector_color_text</item>
+        <item name="android:gravity">left|start|center_vertical</item>
+        <item name="android:textSize">@dimen/textSizeMedium</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+    </style>
+
+    <style name="NavigationTab" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/tabIndicatorColor</item>
+        <item name="tabGravity">fill</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabSelectedTextColor">@color/tabSelected</item>
+        <item name="tabTextAppearance">@style/NavigationTabTextAppeareance</item>
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+    </style>
+
+
+    <style name="NavigationTabTextAppeareance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/tabPassive</item>
+        <item name="android:textSize">@dimen/textSizeBig</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="SwipeFling">
+        <item name="rotation_degrees">15</item>
+        <item name="min_adapter_stack">1</item>
+        <item name="max_visible">4</item>
+    </style>
+
+    <!-- Transparent dialog-->
+    <style name="TransparentProgressDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+</resources>

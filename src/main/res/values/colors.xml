@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#303F9F</color>
+    <color name="colorPrimaryDark">#3F51B5</color>
+    <color name="colorAccent">#9E9E9E</color>
+
+    <color name="primary_light">#C5CAE9</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#828282</color>
+
+    <color name="icons">#FFFFFF</color>
+
+    <color name="dividerColor">#B6B6B6</color>
+
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+
+    <color name="drawerBackground">@color/colorPrimaryDark</color>
+    <color name="drawerSubtitleItemBackground">#303F9F</color>
+    <color name="drawerRowItemBackground">@color/colorPrimaryDark</color>
+
+    <color name="generic_color">#EABF0B</color>
+    <color name="selected_background">#ffaa3f</color>
+
+    <color name="tabSelected">#FFFFFF</color>
+    <color name="tabIndicatorColor">#FF4081</color>
+    <color name="tabPassive">#A3A3A3</color>
+
+    <color name="textSelected">#000000</color>
+    <color name="textPassive">#FFFFFF</color>
+
+    <color name="itemSelected">#FFFFFF</color>
+    <color name="itemPassive">#000000</color>
+
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#FF33B5E5</color>
+    <color name="purple">#FFAA66CC</color>
+    <color name="green">#FF99CC00</color>
+    <color name="orange">#FFFFBB33</color>
+    <color name="red">#FFFF4444</color>
+    <color name="yellow">#FCCB00</color>
+    <color name="darkBlue">#FF0099CC</color>
+    <color name="darkPurple">#FF9933CC</color>
+    <color name="darkGreen">#FF669900</color>
+    <color name="darkOrange">#FFFF8800</color>
+    <color name="darkRed">#FFCC0000</color>
+    <color name="darkGrey">#777777</color>
+
+    <color name="buttonTransparentGrey">#559E9E9E</color>
+    <color name="buttonTransparentBlack">#B3000000</color>
+
+    <color name="material_green_50">#E8F5E9</color>
+    <color name="material_green_500">#4CAF50</color>
+    <color name="material_green_700">#388E3C</color>
+    <color name="material_green_a200">#69F0AE</color>
+    <color name="material_lime_a700">#AEEA00</color>
+    <color name="material_purple_a700">#AA00FF</color>
+</resources>

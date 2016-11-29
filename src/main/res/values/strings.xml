@@ -1,0 +1,106 @@
+<resources>
+    <string name="title_activity_maps">Map</string>
+
+
+    <!-- Permission Manager -->
+    <string name="info">Bilgi</string>
+    <string name="permissionDeniedWarning">Devam edebilmek adına \"%s \" için izin vermeniz gerekmektedir.</string>
+    <string name="permissionDeniedNoMoreWarning">Devam edebilmek adına \"%s \" için ayarlardan izin vermeniz gerekmektedir.</string>
+
+    <string name="try_again">Please try again later</string>
+    <string name="dont_allow">İzin Verme</string>
+    <string name="go_to_settings">Ayarlara Git</string>
+
+    <string name="permissionListWarning">Devam edebilmek için telefonunuzun \"%s\" erişim izni vermeniz gerekmektedir.</string>
+    <!-- Permission Manager -->
+
+
+    <!-- Font Type Names -->
+    <string name="robotoBold">Roboto-Bold.ttf</string>
+    <string name="robotoMedium">Roboto-Medium.ttf</string>
+    <string name="robotoLight">Roboto-Light.ttf</string>
+    <string name="robotoRegular">Roboto-Regular.ttf</string>
+
+    <string name="robotoBlack">Roboto-Black.ttf</string>
+    <string name="robotoBlackItalic">Roboto-BlackItalic.ttf</string>
+    <string name="robotoBoldItalic">Roboto-BoldItalic.ttf</string>
+    <string name="robotoItalic">Roboto-Italic.ttf</string>
+    <string name="robotoLightItalic">Roboto-LightItalic.ttf</string>
+    <string name="robotoMediumItalic">Roboto-MediumItalic.ttf</string>
+    <string name="robotoThin">Roboto-Thin.ttf</string>
+    <string name="robotoThinItalic">Roboto-ThinItalic.ttf</string>
+    <string name="robotoCondensedBold">RobotoCondensed-Bold.ttf</string>
+    <string name="robotoCondensedBoldItalic">RobotoCondensed-BoldItalic.ttf</string>
+    <string name="robotoCondensedItalic">RobotoCondensed-Italic.ttf</string>
+    <string name="robotoCondensedLight">RobotoCondensed-Light.ttf</string>
+    <string name="robotoCondensedLightItalic">RobotoCondensed-LightItalic.ttf</string>
+    <string name="robotoCondensedRegular">RobotoCondensed-Regular.ttf</string>
+    <!-- Font Type Names -->
+
+    <!-- Date Variables -->
+    <string name="monday">Pazartesi</string>
+    <string name="tuesday">Salı</string>
+    <string name="wednesday">Çarşamba</string>
+    <string name="thursday">Perşembe</string>
+    <string name="friday">Cuma</string>
+    <string name="saturday">Cumartesi</string>
+    <string name="sunday">Pazar</string>
+
+    <string name="january">Ocak</string>
+    <string name="february">Şubat</string>
+    <string name="march">Mart</string>
+    <string name="april">Nisan</string>
+    <string name="may">Mayıs</string>
+    <string name="june">Haziran</string>
+    <string name="july">Temmuz</string>
+    <string name="august">Ağustos</string>
+    <string name="september">Eylül</string>
+    <string name="october">Ekim</string>
+    <string name="november">Kasım</string>
+    <string name="december">Aralık</string>
+    <!-- Date Variables -->
+
+    <string name="openDrawer">openDrawer</string>
+    <string name="closeDrawer">closeDrawer</string>
+
+    <string name="error_no_content">Unfortunately, there is no content.</string>
+
+    <string name="share">Share</string>
+
+    <!-- <iframe src=\"https://www.youtube.com/embed/%1$s\" frameborder=\"0\" style=\"overflow:hidden;height:100%%;width:100%%\" height=\"100%%\" width=\"100%%\" %2$s allowfullscreen></iframe> -->
+     <string name="iframeHTML">
+        <![CDATA[
+                <iframe src=\"https://www.youtube.com/embed/%1$s\" onload=\"this.width=screen.width;this.height=screen.height;\" frameborder=\"0\" style=\"overflow:hidden;height:100%%;width:100%%\" height=\"100%%\" width=\"100%%\" %2$s allowfullscreen></iframe>
+        ]]></string>
+
+    <!--EmbedLink <meta content=\"user-scalable=no, width=%2$s\" id=\"viewport\" name=\"viewport\"> -->
+    <string name="embedLinkContentHTML">
+        <![CDATA[
+        <!DOCTYPE html>
+            <head>
+                <meta charset="UTF-8">
+                <style type="text/css">
+                body {
+                    margin: 0;
+                    padding: 0;
+                    line-height: 1.2;
+                    text-align: center;
+                    overflow:hidden;
+                }
+                %2$s
+                </style>
+            </head>
+            <body>
+               %1$s
+            </body>
+        </html>
+        ]]>
+    </string>
+
+    <!-- was "Signing up..." -->
+    <string name="progress_dialog_signing_up">Creating your shiny new account..</string>
+    <string name="log_in">Login</string>
+    <string name="log_out">Logout</string>
+
+    <string name="confirmation_message">Do you want to proceed?</string>
+</resources>

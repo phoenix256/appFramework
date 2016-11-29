@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TextViewPlus">
+        <attr name="customFont" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="SwipeFlingAdapterView">
+        <attr name="SwipeFlingStyle" format="reference" />
+        <attr name="rotation_degrees" format="float" />
+        <attr name="min_adapter_stack" format="integer" />
+        <attr name="max_visible" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="MultiStateFrameLayout">
+        <attr name="loadingView" format="reference" />
+        <attr name="errorView" format="reference" />
+        <attr name="viewState" format="enum">
+            <enum name="content" value="0" />
+            <enum name="error" value="1" />
+            <enum name="loading" value="2" />
+        </attr>
+    </declare-styleable>
+
+</resources>
