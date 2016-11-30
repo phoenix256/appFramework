@@ -101,6 +101,7 @@
     <string name="progress_dialog_signing_up">Creating your shiny new account..</string>
     <string name="log_in">Login</string>
     <string name="log_out">Logout</string>
+    <string name="be_premium">Be Premium</string>
 
     <string name="confirmation_message">Do you want to proceed?</string>
 </resources>

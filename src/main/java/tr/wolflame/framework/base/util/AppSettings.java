@@ -242,11 +242,15 @@ public abstract class AppSettings {
     }
 
     public static <T> void getValue(final Class<T> classOfT, final ItemValueEventListener<T> itemValueEventListener, String... resultKeyList) {
-        getValue(classOfT, true, itemValueEventListener, resultKeyList);
+        getValue(classOfT, true, itemValueEventListener, true, resultKeyList);
     }
 
-    public static <T> void getValue(final Class<T> classOfT, boolean keepSynced, final ItemValueEventListener<T> itemValueEventListener, String... resultKeyList) {
-        Log.d(TAG, "getValue() called with: classOfT = [" + classOfT + "], keepSynced = [" + keepSynced + "], itemValueEventListener = [" + itemValueEventListener + "], resultKeyList = [" + resultKeyList + "]");
+    public static <T> void getValue(final Class<T> classOfT, final ItemValueEventListener<T> itemValueEventListener, boolean isUnderUser, String... resultKeyList) {
+        getValue(classOfT, true, itemValueEventListener, isUnderUser, resultKeyList);
+    }
+
+    public static <T> void getValue(final Class<T> classOfT, boolean keepSynced, final ItemValueEventListener<T> itemValueEventListener, boolean isUnderUser, String... resultKeyList) {
+        Log.d(TAG, "getValue() called with: classOfT = [" + classOfT + "], keepSynced = [" + keepSynced + "], itemValueEventListener = [" + itemValueEventListener + "], isUnderUser = [" + isUnderUser + "], resultKeyList = [" + resultKeyList + "]");
 
         if (FirebaseAuthHelper.isUserSignedIn() && resultKeyList != null && resultKeyList.length > 0) {
 
@@ -259,7 +263,10 @@ public abstract class AppSettings {
                 final String uid = firebaseUser.getUid();
 
                 if (!TextUtils.isEmpty(uid)) {
-                    databaseReference = databaseReference.child(KEY_USER_DATABASE).child(uid);
+                    databaseReference = databaseReference.child(KEY_USER_DATABASE);
+
+                    if (isUnderUser)
+                        databaseReference = databaseReference.child(uid);
 
                     for (String child : resultKeyList) {
                         databaseReference = databaseReference.child(child);
@@ -274,6 +281,7 @@ public abstract class AppSettings {
                             } catch (Exception e) {
                                 e.printStackTrace();
                                 FirebaseCrash.report(e);
+                                itemValueEventListener.onCancelled();
                             }
                         }
 

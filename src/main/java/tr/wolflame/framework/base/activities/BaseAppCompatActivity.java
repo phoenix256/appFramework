@@ -57,6 +57,7 @@ import tr.wolflame.framework.base.objects.ExtraPair;
 import tr.wolflame.framework.base.objects.FragmentPair;
 import tr.wolflame.framework.base.objects.LeftMenuItem;
 import tr.wolflame.framework.base.util.LogApp;
+import tr.wolflame.framework.base.util.billing.IabHelper;
 import tr.wolflame.framework.base.util.helper.MultiStateFrameLayout;
 import tr.wolflame.framework.base.util.helper.OnTaskCompleted;
 import tr.wolflame.framework.base.util.helper.SearchRunnable;
@@ -475,6 +476,18 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity implements
 
             }
         }
+    }
+
+    private IabHelper iabHelper;
+
+    public void initIabHelper(String base64EncodedPublicKey, IabHelper.OnIabSetupFinishedListener onIabSetupFinishedListener) {
+        iabHelper = new IabHelper(this, base64EncodedPublicKey);
+
+        iabHelper.startSetup(onIabSetupFinishedListener);
+    }
+
+    public IabHelper getIabHelper() {
+        return iabHelper;
     }
 
     /**
@@ -1074,5 +1087,17 @@ public abstract class BaseAppCompatActivity extends AppCompatActivity implements
 
     public void setBaseSignInInterface(BaseSignInInterface baseSignInInterface) {
         this.baseSignInInterface = baseSignInInterface;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (iabHelper != null)
+            try {
+                iabHelper.dispose();
+            } catch (IabHelper.IabAsyncInProgressException e) {
+                e.printStackTrace();
+            }
+        iabHelper = null;
     }
 }

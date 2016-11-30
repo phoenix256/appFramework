@@ -21,4 +21,9 @@
         </attr>
     </declare-styleable>
 
+    <declare-styleable name="SlipperLinearLayout">
+        <attr name="in_animation" format="reference" />
+        <attr name="out_animation" format="reference" />
+    </declare-styleable>
+
 </resources>
