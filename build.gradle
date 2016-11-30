@@ -19,18 +19,18 @@ android {
     }
 
     signingConfigs {
-        base {
-            keyAlias 'dergilik'
-            keyPassword 'bardsong4!367'
+        /*base {
+            keyAlias 'trial'
+            keyPassword 'trial24'
             storeFile file('../baseKeystore.jks')
-            storePassword 'bardsong34!98'
+            storePassword 'trial24'
         }
         framed {
-            keyAlias 'dergilik'
-            keyPassword 'bardsong4!367'
+            keyAlias 'trial'
+            keyPassword 'btrial'
             storeFile file('../baseKeystore.jks')
-            storePassword 'bardsong34!98'
-        }
+            storePassword 'trial'
+        }*/
     }
 
     buildTypes {
@@ -54,7 +54,7 @@ android {
             versionCode 2
             versionName "1.0"
 
-            signingConfig signingConfigs.base
+            //signingConfig signingConfigs.base
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 
         }
@@ -62,7 +62,7 @@ android {
         framed {
             versionCode 8
             versionName "1.0.0"
-            signingConfig signingConfigs.framed
+            //signingConfig signingConfigs.framed
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard_rules.pro'
         }
 
