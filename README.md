@@ -1,7 +1,7 @@
 # appframework
 Framework for easy and fast Android Development
 
-You can quickly add framework into your application with this three easy step:
+You can quickly add this framework into your application with this three easy step:
 
 1) Open Android Studio Terminal tab and type:  
   
