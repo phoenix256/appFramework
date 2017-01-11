@@ -1,5 +1,5 @@
 # appframework
-Framework for easy and fast Android Development
+Framework for easy and fast Android Development!
 
 You can quickly add this framework into your application with this three easy step:
 
